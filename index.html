@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Health Journals Database</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+      
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+      
+      .header {
+        text-align: center;
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        border-bottom: 3px solid #667eea;
+      }
+      
+      .main-title {
+        font-size: 3em;
+        color: #2c3e50;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+      
+      .subtitle {
+        font-size: 1.2em;
+        color: #7f8c8d;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      
+      .stats-bar {
+        display: flex;
+        justify-content: space-around;
+        margin: 30px 0;
+        padding: 20px;
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        border-radius: 15px;
+        color: white;
+        text-align: center;
+      }
+      
+      .stat-item h3 {
+        font-size: 2em;
+        margin-bottom: 5px;
+      }
+      
+      .stat-item p {
+        font-size: 0.9em;
+        opacity: 0.9;
+      }
+      
+      .journals-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+      }
+      
+      .journal-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid #e0e0e0;
+      }
+      
+      .journal-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+      
+      .card-header {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        padding: 20px;
+        color: white;
+      }
+      
+      .journal-title {
+        font-size: 1.3em;
+        margin: 0;
+        font-weight: 600;
+      }
+      
+      .card-body {
+        padding: 20px;
+      }
+      
+      .card-body p {
+        margin-bottom: 12px;
+        font-size: 0.95em;
+      }
+      
+      .impact-factor {
+        background: #27ae60;
+        color: white;
+        padding: 3px 8px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      
+      .card-footer {
+        padding-top: 15px;
+        border-top: 1px solid #ecf0f1;
+      }
+      
+      .visit-link {
+        display: inline-block;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 500;
+        transition: transform 0.2s ease;
+      }
+      
+      .visit-link:hover {
+        transform: scale(1.05);
+      }
+      
+      .footer {
+        margin-top: 50px;
+        text-align: center;
+        padding: 30px;
+        background: #34495e;
+        color: white;
+        border-radius: 15px;
+      }
+      
+      @media (max-width: 768px) {
+        .container {
+          padding: 20px;
+        }
+        
+        .main-title {
+          font-size: 2em;
+        }
+        
+        .stats-bar {
+          flex-direction: column;
+          gap: 15px;
+        }
+        
+        .journals-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">Public Health Journals Database</h1>
+            <p class="subtitle">A comprehensive collection of leading academic journals in public health, epidemiology, and health policy research</p>
+        </div>
+        
+        <div class="stats-bar">
+            <div class="stat-item">
+                <h3>10</h3>
+                <p>Featured Journals</p>
+            </div>
+            <div class="stat-item">
+                <h3>29.9</h3>
+                <p>Highest Impact Factor</p>
+            </div>
+            <div class="stat-item">
+                <h3>7.6</h3>
+                <p>Average Impact Factor</p>
+            </div>
+        </div>
+        
+        <div class="journals-grid">
+            
+    <div class="journal-card">
+      <div class="card-header">
+        <h3 class="journal-title">American Journal of Public Health</h3>
+      </div>
+      <div class="card-body">
+        <p><strong>Publisher:</strong> American Public Health Association</p>
+        <p><strong>Impact Factor:</strong> <span class="impact-factor">9.6</span></p>
+        <p><strong>Focus Area:</strong> General Public Health</p>
+        <div class="card-footer">
+          <a href="https://ajph.aphapublications.org/" target="_blank" class="visit-link">Visit Journal</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="journal-card">
+      <div class="card-header">
+        <h3 class="journal-title">The Lancet Public Health</h3>
+      </div>
+      <div class="card-body">
+        <p><strong>Publisher:</strong> Elsevier</p>
+        <p><strong>Impact Factor:</strong> <span class="impact-factor">29.9</span></p>
+        <p><strong>Focus Area:</strong> Global Health Policy</p>
+        <div class="card-footer">
+          <a href="https://www.thelancet.com/journals/lanpub/home" target="_blank" class="visit-link">Visit Journal</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="journal-card">
+      <div class="card-header">
+        <h3 class="journal-title">Journal of Epidemiology and Community Health</h3>
+      </div>
+      <div class="card-body">
+        <p><strong>Publisher:</strong> BMJ Publishing Group</p>
+        <p><strong>Impact Factor:</strong> <span class="impact-factor">4.4</span></p>
+        <p><strong>Focus Area:</strong> Community Health & Epidemiology</p>
+        <div class="card-footer">
+          <a href="https://jech.bmj.com/" target="_blank" class="visit-link">Visit Journal</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="journal-card">
+      <div class="card-header">
+        <h3 class="journal-title">Social Science & Medicine</h3>
+      </div>
+      <div class="card-body">
+        <p><strong>Publisher:</strong> Elsevier</p>
+        <p><strong>Impact Factor:</strong> <span class="impact-factor">4.9</span></p>
+        <p><strong>Focus Area:</strong> Social Determinants of Health</p>
+        <div class="card-footer">
+          <a href="https://www.sciencedirect.com/journal/social-science-and-medicine" target="_blank" class="visit-link">Visit Journal</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="journal-card">
+      <div class="card-header">
+        <h3 class="journal-title">Environmental Health Perspectives</h3>
+      </div>
+      <div class="card-body">
+        <p><strong>Publisher:</strong> National Institute of Environmental Health Sciences</p>
+        <p><strong>Impact Factor:</strong> <span class="impact-factor">11</span></p>
+        <p><strong>Focus Area:</strong> Environmental Health</p>
+        <div class="card-footer">
+          <a href="https://ehp.niehs.nih.gov/" target="_blank" class="visit-link">Visit Journal</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="journal-card">
+      <div class="card-header">
+        <h3 class="journal-title">Global Health Action</h3>
+      </div>
+      <div class="card-body">
+        <p><strong>Publisher:</strong> Taylor & Francis</p>
+        <p><strong>Impact Factor:</strong> <span class="impact-factor">3.4</span></p>
+        <p><strong>Focus Area:</strong> Global Health</p>
+        <div class="card-footer">
+          <a href="https://www.tandfonline.com/journals/zgha20" target="_blank" class="visit-link">Visit Journal</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="journal-card">
+      <div class="card-header">
+        <h3 class="journal-title">International Journal of Environmental Research and Public Health</h3>
+      </div>
+      <div class="card-body">
+        <p><strong>Publisher:</strong> MDPI</p>
+        <p><strong>Impact Factor:</strong> <span class="impact-factor">4.6</span></p>
+        <p><strong>Focus Area:</strong> Environmental Research & Public Health</p>
+        <div class="card-footer">
+          <a href="https://www.mdpi.com/journal/ijerph" target="_blank" class="visit-link">Visit Journal</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="journal-card">
+      <div class="card-header">
+        <h3 class="journal-title">BMC Public Health</h3>
+      </div>
+      <div class="card-body">
+        <p><strong>Publisher:</strong> BioMed Central</p>
+        <p><strong>Impact Factor:</strong> <span class="impact-factor">3.3</span></p>
+        <p><strong>Focus Area:</strong> Population Health Research</p>
+        <div class="card-footer">
+          <a href="https://bmcpublichealth.biomedcentral.com/" target="_blank" class="visit-link">Visit Journal</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="journal-card">
+      <div class="card-header">
+        <h3 class="journal-title">Health Policy and Planning</h3>
+      </div>
+      <div class="card-body">
+        <p><strong>Publisher:</strong> Oxford University Press</p>
+        <p><strong>Impact Factor:</strong> <span class="impact-factor">2.9</span></p>
+        <p><strong>Focus Area:</strong> Health Systems & Policy</p>
+        <div class="card-footer">
+          <a href="https://academic.oup.com/heapol" target="_blank" class="visit-link">Visit Journal</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="journal-card">
+      <div class="card-header">
+        <h3 class="journal-title">Journal of Public Health Policy</h3>
+      </div>
+      <div class="card-body">
+        <p><strong>Publisher:</strong> Palgrave Macmillan</p>
+        <p><strong>Impact Factor:</strong> <span class="impact-factor">2.4</span></p>
+        <p><strong>Focus Area:</strong> Public Health Policy</p>
+        <div class="card-footer">
+          <a href="https://link.springer.com/journal/41271" target="_blank" class="visit-link">Visit Journal</a>
+        </div>
+      </div>
+    </div>
+        </div>
+        
+        <div class="footer">
+            <h3>About This Database</h3>
+            <p>This database showcases prominent public health journals that contribute to advancing research in population health, epidemiology, health policy, and environmental health. Impact factors are approximate and may vary by year.</p>
+            <br>
+            <p>Generated with R | Last Updated: September 21, 2025</p>
+        </div>
+    </div>
+</body>
+</html>
